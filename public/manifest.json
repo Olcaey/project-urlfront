@@ -1,0 +1,36 @@
+{
+  "name": "VisitMyPost Url",
+  "short_name": "VisitMyPost Url",
+  "icons": [
+    {
+      "src": "/favicon-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/favicon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicon-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/favicon-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/favicon-36.png",
+      "type": "image/png",
+      "sizes": "36x36"
+    },
+  ],
+  "background_color": "#ddd",
+  "description": "Url Shortener Front WebApp for VisitMyPost Platform",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#333"
+}
