@@ -1,4 +1,4 @@
-export const EU_COUNTYRIES = [
+export const EU_COUNTRIES = [
   "BE",
   "BG",
   "CZ",
