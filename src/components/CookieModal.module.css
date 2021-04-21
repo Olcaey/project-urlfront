@@ -23,6 +23,11 @@
 .text { 
 	font-size: 14px;
 	padding: 0 1rem;
+	text-align: center;
+}
+
+.title { 
+	text-align: center;
 }
 
 .link {

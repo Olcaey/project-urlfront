@@ -4,11 +4,11 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import * as React from "react";
 import TagManager from "react-gtm-module";
-
 import { ApolloProvider } from "@apollo/client";
 import client from "../apollo-client";
-
 import { apiUrl, gtmId, sentryDsn, sentrySampleRate} from "../config";
+import '../global.css'
+
 
 if (process.env.GTM_ID) {
   TagManager.initialize({ gtmId: gtmId });

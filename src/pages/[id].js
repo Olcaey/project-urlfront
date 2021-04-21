@@ -5,36 +5,39 @@ import NotFound from "../components/NotFound";
 import Layout from "../components/layout";
 
 const QUERY = gql`
-query publicUrl($shortcode:String) {
-  publicUrl(shortcode:$shortcode) {
-    id
-    fullUrl
-    facebookPixel
-    googleAnalytics
-    country {
-      code
-      country
+  query publicUrl($shortcode: String) {
+    publicUrl(shortcode: $shortcode) {
+      id
+      fullUrl
+      facebookPixel
+      googleAnalytics
+      country {
+        code
+        country
+      }
     }
   }
-}
 `;
 
 const DynamicPage = () => {
 
   const { query } = useRouter();
-
-
-  const { data, error, loading } =  useQuery(QUERY, {
-		variables: {
-			shortcode:query.id,
-		}
-	});
   
-  if(loading) return <h1>Loading...</h1>;
-  if(error) return <Layout> <NotFound /> </Layout>;
+  const { data, error, loading } = useQuery(QUERY, {
+    variables: {
+      shortcode: query.id,
+    },
+  });
 
+  if (loading) return <h1>Loading...</h1>;
+  if (error)
+    return (
+      <Layout>
+        <NotFound />
+      </Layout>
+    );
 
-  return <Home data={data}/>;
+  return <Home data={data} />;
 };
 
 export default DynamicPage;
