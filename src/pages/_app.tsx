@@ -5,6 +5,9 @@ import Head from "next/head";
 import * as React from "react";
 import TagManager from "react-gtm-module";
 
+import { ApolloProvider } from "@apollo/client";
+import client from "../apollo-client";
+
 import { apiUrl, gtmId, sentryDsn, sentrySampleRate} from "../config";
 
 if (process.env.GTM_ID) {
@@ -24,7 +27,7 @@ const App = ({
   Component,
   pageProps
 }: AppProps) => (
-  <>
+  <ApolloProvider client={client}>
     <Head>
       <title>VisitMyPost Url</title>
       <link rel="preconnect" href={apiUrl} />
@@ -36,7 +39,7 @@ const App = ({
     </Head>
 
     <Component {...pageProps} />
-  </>
+  </ApolloProvider>
 );
 
 export default App;

@@ -1,3 +1,4 @@
+
 const Redirect = () => {
 	return (
 		<div className='column_wrapper'>
