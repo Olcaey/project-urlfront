@@ -1,7 +1,8 @@
 import { useRouter } from "next/dist/client/router";
-import Home from "./index";
+import Home from ".";
 import { useQuery, gql } from "@apollo/client";
 import NotFound from "../components/NotFound";
+import Layout from "../components/layout";
 
 const QUERY = gql`
 query publicUrl($shortcode:String) {
@@ -20,8 +21,8 @@ query publicUrl($shortcode:String) {
 
 const DynamicPage = () => {
 
-  const { query, router } = useRouter();
-  if(!query) router.push('https://visitmypost.com')
+  const { query } = useRouter();
+
 
   const { data, error, loading } =  useQuery(QUERY, {
 		variables: {
@@ -30,7 +31,7 @@ const DynamicPage = () => {
 	});
   
   if(loading) return <h1>Loading...</h1>;
-  if(error) return <NotFound />;
+  if(error) return <Layout> <NotFound /> </Layout>;
 
 
   return <Home data={data}/>;
