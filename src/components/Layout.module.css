@@ -10,4 +10,6 @@
   
 .app_wrapper {
 	  min-height: 70vh;
+	  display: flex;
+	  
   }
