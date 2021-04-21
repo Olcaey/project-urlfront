@@ -1,0 +1,45 @@
+.modal{
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	height: 450px;
+	align-items: center;
+	background: #ffffff;
+	box-shadow:  20px 20px 60px #bebebe,
+				-20px -20px 60px #ffffff;
+	border-radius: 30px;			
+}
+
+.btn_close {
+	align-self: flex-end;
+	padding: 1rem;
+	font-size: 22px;
+	font-weight: 700;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+}
+
+.text { 
+	font-size: 14px;
+	padding: 0 1rem;
+}
+
+.link {
+	color: #24a0ed;
+}
+
+.btn_accept {
+	font-size: 24px;
+	padding: 0.5rem 2rem;
+	background-color:  #24a0ed;
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+
+.btn_accept:hover {
+	background-color:  #096096;
+}
