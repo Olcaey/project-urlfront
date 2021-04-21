@@ -25,5 +25,6 @@ export const EU_COUNTRIES = [
   "SI",
   "SK",
   "FI",
-  "SE"
+  "SE",
+  'TR'
 ]
