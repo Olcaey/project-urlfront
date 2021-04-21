@@ -3,8 +3,8 @@ import Layout from "../components/layout";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { apiUrl } from "../config";
 
-export default function Home({ launches }) {
-  console.log(launches);
+export default function Home({ data }) {
+  console.log(data);
   return (
     <Layout>
       <App />
