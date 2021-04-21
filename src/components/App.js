@@ -8,8 +8,8 @@ import { useQuery, gql } from "@apollo/client";
 
 
 const QUERY = gql`
-query QUERY($shortcode:String) {
-  PublicUrl(shortcode:$shortcode) {
+query publicUrl($shortcode:String) {
+  publicUrl(shortcode:$shortcode) {
     id
     fullUrl
     facebookPixel
@@ -24,17 +24,19 @@ query QUERY($shortcode:String) {
 
 const App = () => {
 
-	const { data } =  useQuery(QUERY, {
+	const { data, error } =  useQuery(QUERY, {
 		variables: {
-			$shortcode:"q4ro9u3t1z3j",
+			shortcode:"q4ro9u3t1z3j",
 		}
 	});
+
+  console.log(data)
 
   const isUrlValid = true;
   const isGDPR = true;
   const [isAcceptedCookies, setIsAcceptedCookies] = useState(false);
   const [isRejected, setIsRejected] = useState(false);
-  console.log(data)
+  
   if (!isUrlValid) return <NotFound />;
 
   useEffect(() => {
@@ -44,6 +46,7 @@ const App = () => {
       setIsAcceptedCookies(cookie.get("ACCEPT_TOKEN"));
     }
   }, []);
+
 
   function setCookie() {
     cookie.set("ACCEPT_TOKEN", "true", { expires: 180 });
