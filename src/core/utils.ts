@@ -29,3 +29,7 @@ export const EU_COUNTRIES = [
   'TR',
   'US'
 ]
+
+export const BYPASS_WEBSITES = [
+  "https://visitmypost.com"
+]
