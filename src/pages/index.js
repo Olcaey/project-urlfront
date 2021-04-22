@@ -5,7 +5,6 @@ import Layout from "../components/layout";
 import { paths } from "../paths";
 
 export default function Home({ data }) {
-  
   const { pathname } = useRouter();
   const { base, site } = paths;
 

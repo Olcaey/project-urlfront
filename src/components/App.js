@@ -3,12 +3,11 @@ import CookieModal from "./CookieModal";
 import Redirect from "./RedirectedSuccess";
 import RejectedMessage from "./RejectedMessage";
 import cookie from "js-cookie";
-import { EU_COUNTRIES } from '../core/utils';
+import { EU_COUNTRIES } from "../core/utils";
 
 const App = ({ data }) => {
-
   const userCountry = data.publicUrl.country.code;
-  
+
   const isUserFromEU = EU_COUNTRIES.includes(userCountry);
   const [isAcceptedCookies, setIsAcceptedCookies] = useState(false);
   const [isRejected, setIsRejected] = useState(false);
@@ -31,13 +30,15 @@ const App = ({ data }) => {
   }
 
   return isAcceptedCookies ? (
-    <Redirect 
-      URL= {data.publicUrl.fullUrl}
-    />
+    <Redirect URL={data.publicUrl.fullUrl} />
   ) : isRejected ? (
     <RejectedMessage />
   ) : (
-    <CookieModal setCookies={setCookie} rejectCookie={rejectCookie} />
+    <CookieModal
+      URL={data.publicUrl.fullUrl}
+      setCookies={setCookie}
+      rejectCookie={rejectCookie}
+    />
   );
 };
 

@@ -9,7 +9,6 @@ import client from "../apollo-client";
 import { apiUrl, gtmId, sentryDsn, sentrySampleRate} from "../config";
 import '../global.css'
 
-
 if (process.env.GTM_ID) {
   TagManager.initialize({ gtmId: gtmId });
 }

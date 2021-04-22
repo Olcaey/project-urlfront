@@ -1,14 +1,12 @@
-const Logo = ({ small, large }) => {
+const Logo = ({ small }) => {
+  const style = small ? "logo_small" : "logo_large";
 
-  const width = small ? "150px" : large ? "400px" : "250px";
   return (
-    <div>
-      <img
-        src="https://test.visitmypost.com/_next/static/images/logo-light.svg"
-        alt="visitmypost.com logo"
-        width={width}
-      />
-    </div>
+    <img
+      className={style}
+      src="https://test.visitmypost.com/_next/static/images/logo-light.svg"
+      alt="visitmypost.com logo"
+    />
   );
 };
 

@@ -3,6 +3,7 @@ import Home from ".";
 import { useQuery, gql } from "@apollo/client";
 import NotFound from "../components/NotFound";
 import Layout from "../components/layout";
+import Loading from "../components/PreLoader";
 
 const QUERY = gql`
   query publicUrl($shortcode: String) {
@@ -22,14 +23,13 @@ const QUERY = gql`
 const DynamicPage = () => {
 
   const { query } = useRouter();
-  
   const { data, error, loading } = useQuery(QUERY, {
     variables: {
       shortcode: query.id,
     },
   });
 
-  if (loading) return <h1>Loading...</h1>;
+  if (loading) return <Loading/>;
   if (error)
     return (
       <Layout>

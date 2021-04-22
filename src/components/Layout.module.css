@@ -4,13 +4,11 @@
 	justify-content: center;
 	align-items: center;
 	max-width: 600px;
-	min-height: 100vh;
+	height: 100vh;
 	margin: 0 auto;
-	
   }
   
 .app_wrapper {
-	  min-height: 70vh;
-	  display: flex;
-	  
+	  min-height: 70%;
+	  display: flex; 
   }
