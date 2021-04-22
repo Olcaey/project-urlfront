@@ -1,0 +1,21 @@
+.preloader:after{
+	animation:left-to-right 1s running infinite linear;
+	background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 94%);
+    bottom:0;
+    content:"";
+    height:5vh;
+    left:0;
+    overflow:hidden;
+    position:absolute;
+    right:0;
+    top:0;
+  }
+
+@keyframes left-to-right {
+	0% {
+	  transform:translateX(-100%);
+	}
+	100% {
+	  transform:translateX(100%);
+	}
+  }
