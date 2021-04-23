@@ -6,7 +6,6 @@ import PreLoader from './PreLoader';
 const Layout = ({ children }) => {
   return (
     <div className={styles.container}>
-      <Logo large/>
       <div className={styles.app_wrapper}>
         {children || <PreLoader />}
       </div>

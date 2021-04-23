@@ -1,7 +1,6 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	max-width: 600px;
 	height: 100vh;
@@ -9,6 +8,12 @@
   }
   
 .app_wrapper {
-	  min-height: 70%;
-	  display: flex; 
+	min-height: 50vh;
+	display: flex; 
   }
+
+  @media (max-height: 700px) { 
+	.container{
+		height: 80vh;
+	}
+   }
