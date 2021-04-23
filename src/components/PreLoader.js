@@ -1,11 +1,22 @@
-import styles from './PreLoader.module.css';
+import styles from "./PreLoader.module.css";
 
 const PreLoader = () => {
-	return (
-		<div className={styles.preloader}>
-			
-		</div>
-	)
-}
+  return (
+    <div className={styles.spinner}>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  );
+};
 
-export default PreLoader
+export default PreLoader;
