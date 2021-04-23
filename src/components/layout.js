@@ -1,6 +1,5 @@
 import Footer from './Footer';
 import styles from './Layout.module.css';
-import Logo from './Logo';
 import PreLoader from './PreLoader';
 
 const Layout = ({ children }) => {
