@@ -14,9 +14,9 @@ const CookieModal = ({ URL, setCookies, rejectCookie }) => {
         width="100px"
       />
       <h3 className={styles.title}>
-        You are being redirected to: <span className={styles.link}>{URL}</span>
+        You are being redirected to: <span className="link">{URL}</span>
       </h3>
-      <div className="">
+      <div>
         <p className={styles.text}>
           VisitMyPost uses cookies to customize content, analyze traffic and
           provide better experience. Click "Accept" to help us improve our
@@ -24,8 +24,9 @@ const CookieModal = ({ URL, setCookies, rejectCookie }) => {
         </p>
         <p className={styles.text}>
           Read our
-          <a href={cookies} target="_blank" className={styles.link}>
+          <a href={cookies} target="_blank" className="link">{' '}
             cookie policy
+            {' '}
           </a>
           for more information on the cookies we use and how to delete or block
           them.

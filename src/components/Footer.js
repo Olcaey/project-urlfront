@@ -11,7 +11,8 @@ const Footer = () => {
 			<Logo small/>
 			<div className={styles.wrapper}>
 				<a className={styles.link} href={cookies}>Terms of Usage</a>
-				<a className={styles.link} href={terms}>Cookie Policy</a>
+				<span>|</span>
+				<a className={styles.link} href={terms}>Privacy Policy</a>
 			</div>
 		</div>
 	)

@@ -21,7 +21,6 @@ const QUERY = gql`
 `;
 
 const DynamicPage = () => {
-
   const { query } = useRouter();
   const { data, error, loading } = useQuery(QUERY, {
     variables: {
@@ -29,13 +28,13 @@ const DynamicPage = () => {
     },
   });
 
-  if (loading) return <Loading/>;
-  if (error)
+  if (loading)
     return (
       <Layout>
-        <NotFound />
+        <Loading />
       </Layout>
     );
+  if (error) return <Layout> <NotFound /></Layout>;
 
   return <Home data={data} />;
 };

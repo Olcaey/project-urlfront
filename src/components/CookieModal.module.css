@@ -3,7 +3,7 @@
 	flex-direction: column;
 	width: 350px;
 	max-width: 90%;
-	margin: 0 auto;
+	margin: 4rem auto;
 	align-self: center;
 	height: 450px;
 	justify-content: space-around;
@@ -11,7 +11,8 @@
 	background: #ffffff;
 	box-shadow:  20px 20px 60px #bebebe,
 				-20px -20px 60px #ffffff;
-	border-radius: 30px;			
+	border-radius: 30px;
+
 }
 
 .btn_close {
@@ -34,10 +35,7 @@
 	text-align: center;
 }
 
-.link {
-	font-size: 12px;
-	color: #24a0ed;
-}
+
 
 .btn_accept {
 	font-size: 24px;
