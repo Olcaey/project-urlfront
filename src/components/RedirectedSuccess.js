@@ -1,9 +1,10 @@
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 
 const Redirect = ({ URL }) => {
 	
-	const router = useRouter();
-	router.push(URL)
+	// const router = useRouter();
+	// router.push(URL)
+	location.replace(URL);
 	
 	return (
 		<div className='column_wrapper'>
