@@ -39,9 +39,7 @@ const App = ({
       <link rel="icon" type="image/png" href="/safari-pinned-tab.svg" color="#5bbad5" />
       <link rel="manifest" href="/manifest.json" />
       <meta name="title" content={title} />
-      <meta name="description" content={description}/>
-      <meta property="og:type" content={type}/>
-      <meta property="og:url" content="https://metatags.io/"/>
+      <meta property="og:url" content="https://facebook.com/"/>
       <meta property="og:title" content={title} />
       <meta property="og:description"  content={description}/>
       <meta property="og:image" content="/favicon-36.png"/>
