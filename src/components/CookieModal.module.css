@@ -9,10 +9,8 @@
 	justify-content: space-around;
 	align-items: center;
 	background: #ffffff;
-	box-shadow:  20px 20px 60px #bebebe,
-				-20px -20px 60px #ffffff;
+	box-shadow:  20px 20px 60px #bebebe;		
 	border-radius: 30px;
-
 }
 
 .btn_close {
@@ -48,4 +46,20 @@
 
 .btn_accept:hover {
 	background-color:  #096096;
+}
+
+.blured{ 
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:black;
+	background:rgba(0,0,0,0.3);
+	filter:blur(4px);
+	-o-filter:blur(4px);
+	-ms-filter:blur(4px);
+	-moz-filter:blur(10px);
+	-webkit-filter:blur(10px);
+	z-index: -10;
 }

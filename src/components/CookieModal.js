@@ -2,8 +2,13 @@ import styles from "./CookieModal.module.css";
 import { paths } from "../paths";
 
 const CookieModal = ({ URL, setCookies, rejectCookie }) => {
+
+
   const { cookies } = paths;
   return (
+    <div>
+
+    <div className={styles.blured}></div>
     <div className={styles.modal}>
       <button className={styles.btn_close} onClick={rejectCookie}>
         X
@@ -36,6 +41,7 @@ const CookieModal = ({ URL, setCookies, rejectCookie }) => {
       <button className={styles.btn_accept} onClick={() => setCookies()}>
         Accept
       </button>
+    </div>
     </div>
   );
 };
