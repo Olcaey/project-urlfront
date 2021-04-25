@@ -4,11 +4,6 @@ const NotFound = () => {
   const { site } = paths;
   return (
     <div className="column_wrapper">
-      <img
-        className="illustration"
-        src="https://res.cloudinary.com/dlt51mt3f/image/upload/v1618983847/Saly-15_upattr.png"
-        alt="3d young man illustiration"
-      />
       <div className="">
         <h2 className="title">Url Not Found</h2>
         <p className="text">

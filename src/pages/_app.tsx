@@ -4,11 +4,10 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import * as React from "react";
 import TagManager from "react-gtm-module";
-import { ApolloProvider } from "@apollo/client";
-import client from "../apollo-client";
+
 import { apiUrl, gtmId, sentryDsn, sentrySampleRate} from "../config";
-import '../global.css'
 import { META_DEFAULTS }from '../core/config'
+import '../global.css'
 
 if (process.env.GTM_ID) {
   TagManager.initialize({ gtmId: gtmId });
@@ -23,13 +22,13 @@ if (sentryDsn) {
   });
 }
 
-const {description, title, type} = META_DEFAULTS;
+const { description, title, type } = META_DEFAULTS;
 
 const App = ({
   Component,
   pageProps
 }: AppProps) => (
-  <ApolloProvider client={client}>
+  <>
     <Head>
       <title>VisitMyPost Url</title>
       <link rel="preconnect" href={apiUrl} />
@@ -41,10 +40,10 @@ const App = ({
       <meta name="title" content={title} />
       <meta name="description" content={description}/>
       <meta property="og:type" content={type}/>
-      <meta property="og:url" content="https://metatags.io/"/>
+      <meta property="og:url" content={META_DEFAULTS.url}/>
       <meta property="og:title" content={title} />
       <meta property="og:description"  content={description}/>
-      <meta property="og:image" content="/favicon-36.png"/>
+      <meta property="og:image" content="/logo.png"/>
       <meta property="twitter:card" content="summary_large_image"/>
       <meta property="twitter:url" content="https://metatags.io/"/>
       <meta property="twitter:title" content={title} />
@@ -53,7 +52,7 @@ const App = ({
     </Head>
 
     <Component {...pageProps} />
-  </ApolloProvider>
+  </>
 );
 
 export default App;

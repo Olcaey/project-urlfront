@@ -19,7 +19,8 @@ const CookieModal = ({ URL, setCookies, rejectCookie }) => {
         width="100px"
       />
       <h3 className={styles.title}>
-        You are being redirected to: <span className="link">{URL}</span>
+        You are being redirected to: <br />
+        <span className="link-inactive">{URL}</span>
       </h3>
       <div>
         <p className={styles.text}>
@@ -28,12 +29,11 @@ const CookieModal = ({ URL, setCookies, rejectCookie }) => {
           services.
         </p>
         <p className={styles.text}>
-          Read our
-          <a href={cookies} target="_blank" className="link">{' '}
-            cookie policy
-            {' '}
+          Read our{' '}
+          <a href={cookies} target="_blank" className="link">
+            Cookie Policy
           </a>
-          for more information on the cookies we use and how to delete or block
+          {' '}for more information on the cookies we use and how to delete or block
           them.
         </p>
       </div>

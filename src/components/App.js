@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import CookieModal from "./CookieModal";
 import Redirect from "./RedirectedSuccess";
-import RejectedMessage from "./RejectedMessage";
+import InfoMessage from "./InfoMessage";
 import cookie from "js-cookie";
-import { EU_COUNTRIES, BYPASS_WEBSITES } from "../core/utils";
+import { EU_COUNTRIES, BYPASS_WEBSITES } from "../core/config";
 
 const App = ({ data }) => {
 
@@ -34,7 +34,7 @@ const App = ({ data }) => {
   return isAcceptedCookies ? (
     <Redirect URL={URL} />
   ) : isRejected ? (
-    <RejectedMessage />
+    <InfoMessage />
   ) : (
     <CookieModal
       URL={URL}
